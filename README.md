@@ -1,5 +1,11 @@
 # WebScraping and Data Analysis on Youtube Channels
 
+<div align="center">
+  <p>
+    <a href="#"><img src="images/numbers of views visualisation.jpeg" width="700" height="350" alt="overview image" /></a>
+  </p>
+</div>
+
 ## Project Description
 
 This project uses Playwright to automate the scraping of videos from a specific YouTube channel. The collected data is then analyzed and visualized using pandas and datahorse. The goal is to gather information about the videos such as title, publication date, and view count, and then analyze and visualize this data by describing wich chart you are excpecting to see.
