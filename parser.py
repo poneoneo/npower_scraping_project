@@ -103,3 +103,7 @@ def convert_to_dataframe(data: list):
 def save_to_csv(data: pd.DataFrame):
     data.to_csv("youtube_videos.csv", index=False)
     print("Data saved to videos.csv")
+
+def remove_empty_values(data: list[dict]):
+    cleaned_data = [d for d in data if all(value not in [None, ''] for value in d.values())]
+    return cleaned_data
