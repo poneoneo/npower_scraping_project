@@ -17,38 +17,55 @@ The objective of this project is to demonstrate the use of web scraping to gathe
 
 ### Installation Steps
 
-  1. Install UV in your PC:
-     #### MacOs and Linux
-      - Use curl to download the script and execute it with sh:
-          ```bash
-              curl -LsSf https://astral.sh/uv/install.sh | sh
-          ```
-      - If your system doesn't have curl, you can use wget:
-          ```bash
-              wget -qO- https://astral.sh/uv/install.sh | sh
-          ```
+1. Clone the project repository:
+    ```bash
+    git clone https://github.com/your-username/your-project.git
+    cd your-project
+    ```
+#### With Uv
+Uv is an incredibly fast and powerful python package manager and I highly recommend using it both to install this project and to build your own. However, if you're not comfortable with this kind of tool or if you prefer to use pip then you can go directly to the [pip](#with-pip) section.
+   1. Install Uv:
+        - - MacOs and Linux.
+           - Use curl to download the script and execute it with sh:
+             ```bash
+                 curl -LsSf https://astral.sh/uv/install.sh | sh
+           ```
+        - - Windows 
+          -  Use PowerShell to download and execute the script:
+                ```powershell
+                powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/0.5.18/install.ps1 | iex"
+             ```
+   2. Create virtualenv and install all required dependencies:
+        ```bash
+            uv sync
+        ```
+   3. Activate virtualenv : 
+        ```bash
+            source .venv/bin/activate or venv\Scripts\activate "for windows"
+        ```
+#### With pip
 
-      - Request a specific version by including it in the URL:
-          ```bash
-              curl -LsSf https://astral.sh/uv/0.5.18/install.sh | sh
-          ```
-     #### Windows
-      - Use PowerShell to download and execute the script:
-          ```powershell
-          powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/0.5.18/install.ps1 | iex"
-          ```
-  2. clone the project repository and cd into the cloned directory:
-      ```bash
-      git clone https://github.com/poneoneo/npower_scraping_project
-      cd npower_scraping_project
-      ```
+1. Create and activate a virtual environment:
 
-  3. Create and activate virtual environnement then install all required dependencies in a single line command :
+   ##### MacOS and Linux
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+   ##### Windows
+    ```powershell
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+
+  1. Install all required dependencies  :
       ```bash
-        uv sync
+        pip install -r requirements.txt
       ```
 
 ## Usage
+
 
 ### Data Scraping
 
